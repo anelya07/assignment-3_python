@@ -10,6 +10,7 @@ print(store_info[2])
 
 print("=" * 30)
 
+weekly_products = set()
 names = []
 prices = []
 check = True
@@ -21,18 +22,21 @@ while check == True:
         check = False
     else:
         names.append(name)
-        price = float(input("Enter price per unit (KZT): "))
-        prices.append(price)
+        weekly_products.add(name)
+        # price = float(input("Enter price per unit (KZT): "))
+        # prices.append(price)
         #subtotal += price
 
-print("-" * 30)
-print(f"Your cart ({len(names)} items): ")
-print("-" * 30)
+# print("-" * 30)
+# print(f"Your cart ({len(names)} items): ")
+# print("-" * 30)
+#
+# for i in range(len(names)):
+#     print(f"{names[i]} - {prices[i]} KZT")
 
-for i in range(len(names)):
-    print(f"{names[i]} - {prices[i]} KZT")
-
 print("-" * 30)
+print(f"Unique products: {len(weekly_products)}")
+print(weekly_products)
 
 
 
